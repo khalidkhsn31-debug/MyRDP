@@ -50,9 +50,9 @@ jobs:
           Add-LocalGroupMember -Group "Administrators" -Member "RDP"
           Add-LocalGroupMember -Group "Remote Desktop Users" -Member "RDP"
           
-          echo "RDP_CREDS=User: RDP | Password: $password" >> $env:GITHUB_ENV
+          echo " My RDP_CREDS=User:  My RDP | Password: $password" >> $Khan1255
           
-          if (-not (Get-LocalUser -Name "RDP")) {
+          if (-not (Get-LocalUser -Name "My RDP")) {
               Write-Error "User creation failed"
               exit 1
           }
