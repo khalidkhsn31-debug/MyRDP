@@ -49,8 +49,6 @@ jobs:
           New-LocalUser -Name "RDP" -Password $securePass -AccountNeverExpires
           Add-LocalGroupMember -Group "Administrators" -Member "RDP"
           Add-LocalGroupMember -Group "Remote Desktop Users" -Member "RDP"
-          
-          
           if (-not (Get-LocalUser -Name "My RDP")) {
               Write-Error "User creation failed"
               exit 1
